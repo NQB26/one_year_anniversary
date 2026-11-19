@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kỷ niệm 1 năm yêu nhau</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c1:#ff5f63;--c2:#fbc9d0;--c3:#ff7a85;--c4:#ffa6b4;--c5:#fc4558;
+  --paper:#fffaf6;--ink:#6b2b35;--accent:#e8394f;--shadow:rgba(120,20,40,.25);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--c1:#c63a47;--c2:#e9a0ad;--c3:#d9525f;--c4:#e58a99;--c5:#b02338;--paper:#2b1519;--ink:#ffe3e6;--accent:#ff7a85;--shadow:rgba(0,0,0,.5);color-scheme:dark}
+}
+:root[data-theme="dark"]{--c1:#c63a47;--c2:#e9a0ad;--c3:#d9525f;--c4:#e58a99;--c5:#b02338;--paper:#2b1519;--ink:#ffe3e6;--accent:#ff7a85;--shadow:rgba(0,0,0,.5);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--c2);font-family:'Quicksand',system-ui,sans-serif;color:var(--ink)}
+body{overflow-x:hidden}
+
+/* nền trái tim tỏa ra từ tâm */
+#bg{position:fixed;inset:0;overflow:hidden;z-index:0;background:var(--c2)}
+#bg svg{position:absolute;left:50%;top:50%;width:30vmax;height:28vmax;margin:-14vmax 0 0 -15vmax;
+  animation:out 10s linear infinite;transform:scale(.05);will-change:transform}
+@keyframes out{
+  0%{transform:scale(.05);z-index:100}
+  100%{transform:scale(4.5);z-index:1}
+}
+
+main{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px}
+.hide{display:none!important}
+.fade{animation:fade .9s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+h1,.script{font-family:'Dancing Script',cursive;font-weight:600}
+.intro{text-align:center}
+.intro h1{font-size:clamp(2.2rem,8vw,4rem);margin:0 0 8px;color:#fff;text-shadow:0 2px 12px var(--shadow)}
+.intro p{margin:0 0 28px;color:#fff;font-size:1.1rem;text-shadow:0 1px 8px var(--shadow)}
+.btn{font:inherit;font-weight:600;border:0;border-radius:999px;padding:12px 26px;background:var(--accent);color:#fff;cursor:pointer;box-shadow:0 6px 18px var(--shadow);transition:transform .15s}
+.btn:hover{transform:scale(1.05)}
+.btn.ghost{background:var(--paper);color:var(--accent)}
+.beat{display:inline-block;font-size:3.2rem;animation:beat 1.2s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+.letter{background:var(--paper);width:min(640px,100%);border-radius:18px;padding:32px 28px;box-shadow:0 18px 50px var(--shadow);max-height:88vh;overflow-y:auto}
+.letter h2{font-family:'Dancing Script',cursive;font-size:2.2rem;margin:0 0 14px;color:var(--accent)}
+.letter .body{line-height:1.8;font-size:1.05rem;white-space:pre-wrap}
+.letter .sign{font-family:'Dancing Script',cursive;font-size:1.8rem;text-align:right;margin-top:18px;color:var(--accent)}
+.bar{display:flex;gap:10px;justify-content:space-between;margin-top:22px;flex-wrap:wrap}
+[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:4px;border-radius:6px}
+
+.gallery{width:min(920px,100%);text-align:center}
+.gallery h2{font-family:'Dancing Script',cursive;font-size:clamp(2rem,6vw,3rem);margin:0 0 20px;color:#fff;text-shadow:0 2px 12px var(--shadow)}
+.grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.pol{background:var(--paper);padding:10px 10px 12px;width:min(210px,44%);border-radius:6px;box-shadow:0 10px 26px var(--shadow);cursor:pointer;opacity:0;animation:pop .7s ease forwards}
+.pol:nth-child(odd){--r:-3deg}.pol:nth-child(even){--r:3deg}
+@keyframes pop{from{opacity:0;transform:scale(.6) rotate(0)}to{opacity:1;transform:rotate(var(--r))}}
+.pol .ph{aspect-ratio:1;background:var(--c2);display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:.85rem;color:var(--accent);overflow:hidden}
+.pol .ph span{font-size:2rem}
+.pol img{width:100%;height:100%;object-fit:cover;display:block}
+.pol .cap{margin-top:8px;font-family:'Dancing Script',cursive;font-size:1.25rem}
+.pol input{display:none}
+.hint{color:#fff;font-size:.9rem;margin-top:18px;text-shadow:0 1px 6px var(--shadow)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="h" viewBox="0 0 32 30"><path d="M16 28.5C2 18-2 9 4 4c5-4 10-2 12 3 2-5 7-7 12-3 6 5 2 14-12 24.500Z"/></symbol></svg>
+<div id="bg"></div>
+
+<main>
+  <!-- 1. Mở đầu -->
+  <section id="s1" class="intro fade">
+    <div class="beat">💌</div>
+    <h1 id="t-title">Kỷ niệm 1 năm yêu nhau</h1>
+    <p id="t-date">Một lá thư nhỏ dành cho em</p>
+    <button class="btn" id="open">Chạm để mở thư ♥</button>
+  </section>
+
+  <!-- 2. Thư -->
+  <section id="s2" class="hide">
+    <div class="letter fade">
+      <h2 id="l-title"></h2>
+      <div class="body" id="l-body"></div>
+      <div class="sign" id="l-sign"></div>
+      <div class="bar">
+        <button class="btn ghost" id="edit"> </button>
+        <button class="btn" id="done">Đã đọc xong ♥</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Ảnh kỷ niệm -->
+  <section id="s3" class="gallery hide">
+    <h2 id="g-title">Những khoảnh khắc của chúng mình</h2>
+    <div class="grid" id="grid"></div>
+  </section>
+</main>
+
+<script>
+/* ====== CHỈNH NỘI DUNG Ở ĐÂY ====== */
+const CONFIG = {
+  introTitle: "Kỷ niệm 1 năm yêu nhau",
+  introSub: "Một lá thư nhỏ dành cho em",
+  letterTitle: "Gửi người Masha,",
+  letterBody:
+"Đã tròn một năm kể từ ngày chúng mình bên nhau. Anh vẫn nhớ rõ cảm giác của ngày đầu tiên ấy, vừa hồi hộp vừa hạnh phúc.\n\nCảm ơn em vì đã luôn ở bên anh, cùng anh đi qua những ngày vui và cả những ngày mệt mỏi. Chúng mình đã vượt qua rất nhiều khó khăn và thử thách. Có những lúc anh chưa hiểu em và em cũng chưa hiểu anh. Nhưng sau mỗi lần như thế mình càng hiểu nhau hơn và anh rất vui vì điều đó.\n\nMong rằng năm tiếp theo, rồi nhiều năm nữa, mình vẫn nắm tay nhau, cùng nhau bước tiếp những ngày sau này.\n\nAnh vẫn luôn iu em mò 😘😘😘.",
+  letterSign: "— Jan Jan",
+  galleryTitle: "Những khoảnh khắc của chúng mình",
+  /* 5 ảnh: điền đường dẫn (ví dụ "img/1.jpg") hoặc để trống rồi chạm vào khung để chọn ảnh */
+  photos: [
+    { src: "first_date.jpg", caption: "Ngày đầu tiên bên nhau" },
+    { src: "photobooth_1.jpg", caption: "Buổi hẹn đáng nhớ" },
+    { src: "photobooth_2.jpg", caption: "Lần đầu đi photobooth" },
+    { src: "trip.jpg", caption: "Chuyến đi đáng nhớ" },
+    { src: "", caption: "Hôm nay, tròn 1 năm" }
+  ]
+};
+/* =================================== */
+
+const $ = id => document.getElementById(id);
+
+// nền: 8 trái tim tỏa ra từ tâm
+const cols = ['--c1','--c2','--c3','--c4','--c5'];
+const N = 8, DUR = 10;
+for (let i = 0; i < N; i++) {
+  const s = document.createElementNS('http://www.w3.org/2000/svg','svg');
+  s.setAttribute('viewBox','0 0 32 30');
+  s.style.fill = `var(${cols[i % cols.length]})`;
+  s.style.animationDelay = `${-(DUR / N) * i}s`;
+  s.innerHTML = '<use href="#h"/>';
+  $('bg').appendChild(s);
+}
+
+// nội dung
+function load() {
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem('anniv') || '{}'); } catch (e) {}
+  const v = { ...CONFIG, ...saved };
+  $('t-title').textContent = v.introTitle;
+  $('t-date').textContent = v.introSub;
+  $('l-title').textContent = v.letterTitle;
+  $('l-body').textContent = v.letterBody;
+  $('l-sign').textContent = v.letterSign;
+  $('g-title').textContent = v.galleryTitle;
+}
+function save() {
+  try {
+    localStorage.setItem('anniv', JSON.stringify({
+      letterTitle: $('l-title').textContent,
+      letterBody: $('l-body').innerText,
+      letterSign: $('l-sign').textContent
+    }));
+  } catch (e) {}
+}
+load();
+
+// sửa thư
+let editing = false;
+$('edit').onclick = () => {
+  editing = !editing;
+  ['l-title','l-body','l-sign'].forEach(id => $(id).contentEditable = editing);
+  $('edit').textContent = editing ? '✔ Lưu thư' : '✎ Sửa thư';
+  if (!editing) save();
+};
+
+// chuyển cảnh
+function show(id) {
+  ['s1','s2','s3'].forEach(s => $(s).classList.toggle('hide', s !== id));
+  $(id).classList.remove('fade'); void $(id).offsetWidth; $(id).classList.add('fade');
+  window.scrollTo(0, 0);
+}
+$('open').onclick = () => show('s2');
+$('done').onclick = () => {
+  if (editing) $('edit').click();
+  show('s3');
+  buildGallery();
+};
+
+// ảnh kỷ niệm
+function buildGallery() {
+  const g = $('grid');
+  g.innerHTML = '';
+  CONFIG.photos.slice(0, 5).forEach((p, i) => {
+    const d = document.createElement('div');
+    d.className = 'pol';
+    d.style.animationDelay = (i * 0.45) + 's';
+    const ph = document.createElement('div');
+    ph.className = 'ph';
+    const cap = document.createElement('div');
+    cap.className = 'cap';
+    cap.contentEditable = true;
+    cap.textContent = p.caption;
+    cap.onclick = e => e.stopPropagation();
+    const inp = document.createElement('input');
+    inp.type = 'file'; inp.accept = 'image/*';
+    const setImg = src => { ph.innerHTML = ''; const im = document.createElement('img'); im.src = src; im.alt = p.caption; ph.appendChild(im); };
+    if (p.src) setImg(p.src);
+    else ph.innerHTML = '<span>♥</span>Chạm để chọn ảnh';
+    d.onclick = () => inp.click();
+    inp.onchange = () => {
+      const f = inp.files[0]; if (!f) return;
+      const r = new FileReader();
+      r.onload = () => setImg(r.result);
+      r.readAsDataURL(f);
+    };
+    d.append(ph, cap, inp);
+    g.appendChild(d);
+  });
+}
+</script>
+</body>
+</html>
